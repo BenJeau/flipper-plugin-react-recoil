@@ -2,7 +2,7 @@
   "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
   "name": "flipper-plugin-react-recoil",
   "id": "react-recoil",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "pluginType": "client",
   "description": "Flipper plugin to view state of atoms and logs of Recoil.js",
   "repository": "BenJeau/flipper-plugin-react-recoil",

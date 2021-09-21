@@ -19,3 +19,7 @@ Flipper [Recoil.js](https://recoiljs.org/) debugging plugin to visualize recoil 
 ![Atom States Dark](assets/screenshot-atom-states-dark.png)
 ![Recoil Logs Light](assets/screenshot-recoil-logs-light.png)
 ![Atom States Light](assets/screenshot-atom-states-light.png)
+
+## License
+
+MIT © [BenJeau](https://github.com/BenJeau)

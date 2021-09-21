@@ -12,16 +12,19 @@ export const stateTagColor: Record<AtomLoadableState, string> = {
   loading: theme.warningColor,
 };
 
-export interface RowData {
-  id: string;
+export interface IncomingRowData {
   atom: string;
   date: string;
   content: any;
   state: AtomLoadableState;
 }
 
+export interface RowData extends IncomingRowData {
+  id: string;
+}
+
 export type Selection = "logs" | "atoms";
 
 export type PluginEvents = {
-  newRow: RowData;
+  newRow: IncomingRowData;
 };

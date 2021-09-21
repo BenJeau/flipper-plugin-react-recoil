@@ -2,6 +2,7 @@ import React from "react";
 import { usePlugin, useValue, Layout } from "flipper-plugin";
 import { PluginClient, createState } from "flipper-plugin";
 import dayjs from "dayjs";
+import { v4 } from "uuid";
 
 import localizedFormat from "dayjs/plugin/localizedFormat";
 dayjs.extend(localizedFormat);
@@ -19,7 +20,11 @@ export function plugin(client: PluginClient<PluginEvents, {}>) {
   const expandData = createState<boolean>(false, { persist: "expandData" });
 
   client.onMessage("newRow", (row) => {
-    const formattedRow = { ...row, date: dayjs(row.date).format("LTS") };
+    const formattedRow = {
+      ...row,
+      date: dayjs(row.date).format("LTS"),
+      id: v4(),
+    };
     rows.update((draft) => [...draft, formattedRow]);
     atoms.update((draft) => ({ ...draft, [row.atom]: formattedRow }));
   });
